@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Launchpad - Your Ticket to Nowhere</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/logo.png" alt="Launchpad Logo" class="logo-img">
+                Launchpad
+            </div>
+            <ul class="nav-links">
+                <li><a href="#book-flight">Book Flight</a></li>
+                <li><a href="#">Manage Crumples</a></li>
+                <li><a href="#">Rewards</a></li>
+                <li><a href="#">Origami Status</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-banner">
+            <div class="hero-content">
+                <img src="images/paper-plane-hero.png" alt="Animated Paper Plane" class="paper-plane-hero-img">
+                <h1>Your Ticket to Nowhere!</h1>
+                <p>"Fly high, crash never! Unless you want to. We don't judge."</p>
+                <a href="#book-flight" class="btn-hero">Start Your Imaginary Journey</a>
+            </div>
+        </section>
+
+        <section id="book-flight" class="book-flight-section card">
+            <h2>🚀 Book Your Flight to the Absurd</h2>
+            <p class="subtitle">Because real destinations are overrated. Choose your adventure!</p>
+            <form id="flight-booking-form">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="departure">Departure Point:</label>
+                        <select id="departure" name="departure">
+                            <option value="desk">Desk (Standard takeoff)</option>
+                            <option value="chair">Chair (Slightly wobbly)</option>
+                            <option value="window">Window (For the brave)</option>
+                            <option value="shelf">Shelf (High altitude start)</option>
+                            <option value="floor">Floor (Ground zero)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="arrival">Destination Unknown:</label>
+                        <select id="arrival" name="arrival">
+                            <option value="trash-can">Trash Can (A classic)</option>
+                            <option value="fan">Fan (Turbulence guaranteed)</option>
+                            <option value="regret">Regret (Popular during exams)</option>
+                            <option value="freedom">Freedom (Highly elusive)</option>
+                            <option value="higher-ground">Higher Ground (Philosophical choice)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="class">Folding Class:</label>
+                        <select id="class" name="class">
+                            <option value="paperclass">PaperClass (Basic fold)</option>
+                            <option value="crumpleclass">CrumpleClass (Economy, pre-loved)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="price">Cost in Origami Points:</label>
+                        <span id="flight-price">100 Origami Points (Non-refundable, of course)</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="time">Estimated Departure/Arrival:</label>
+                        <span>TBD (Time-Based Delusion)</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="baggage">Baggage Allowance:</label>
+                        <span>Always 0g (Emotional baggage accepted, but we'll judge)</span>
+                    </div>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="airline-brand">Choose your Fictional Airline:</label>
+                    <select id="airline-brand" name="airline-brand">
+                        <option value="launchpad">Launchpad (The original)</option>
+                        </select>
+                </div>
+
+                <button type="submit" class="btn-book">Book My Non-Existent Flight!</button>
+            </form>
+        </section>
+
+        <section class="in-flight-services card">
+            <h2>✨ Our Truly Unforgettable In-Flight Services</h2>
+            <p class="subtitle">Because even imaginary flights deserve imaginary perks!</p>
+            <div class="service-list">
+                <div class="service-item">
+                    <img src="images/plane1.png" alt="Paper Plane Service 1" class="service-img">
+                    <h3>Air Chips (Invisible Edition)</h3>
+                    <p>Experience the joy of biting into nothingness. Gluten-free, taste-free. We call it "mindful eating."</p>
+                </div>
+                <div class="service-item">
+                    <img src="images/plane2.png" alt="Paper Plane Service 2" class="service-img">
+                    <h3>Crumpled Water™</h3>
+                    <p>Stay hydrated with our premium, pre-crumpled water. May contain wrinkles. Served in a tiny, imaginary cup.</p>
+                </div>
+                <div class="service-item">
+                    <img src="images/plane3.png" alt="Paper Plane Service 3" class="service-img">
+                    <h3>Complimentary Paper Cuts</h3>
+                    <p>A little souvenir from your journey! Our skilled crew provides precision cuts. Terms and conditions apply (don't sue us).</p>
+                </div>
+                <div class="service-item">
+                    <img src="images/plane4.png" alt="Paper Plane Service 4" class="service-img">
+                    <h3>Origami Safety Demo</h3>
+                    <p>Witness our highly trained paper plane crew demonstrate emergency crumpling and re-folding procedures. Riveting!</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="flight-insurance card">
+            <h2>🛡️ Flight Insurance: For When Things Go Absolutely Nowhere</h2>
+            <p class="subtitle">Why not protect your emotional investment in a fictional journey?</p>
+            <ul>
+                <li>Coverage for **Emotional Damage** (valid only if you cry real tears of frustration).</li>
+                <li>**Sudden Crumpling** Protection (we promise not to judge your folding skills... much).</li>
+                <li>**Unexpected Gusts** Safeguard (includes sneezes, drafts, and sudden existential crises).</li>
+                <li>**Papercuts Only** (no major injuries, please; we're an airline, not a hospital).</li>
+            </ul>
+            <button class="btn-add-on">Add Insurance (Don't Be Sensible)</button>
+            <p class="offer-slogan">"Free snacks if you bring your own chair!"</p>
+        </section>
+
+        <section class="boarding-pass-section card">
+            <h2>🎫 Your Absolutely Real (Not) Boarding Pass</h2>
+            <p class="subtitle">Proof that you're going somewhere... in your mind.</p>
+            <button id="generate-boarding-pass" class="btn-generate">Generate My Absurd Boarding Pass</button>
+            <div id="boarding-pass-preview" class="boarding-pass-preview">
+                </div>
+        </section>
+
+        <section class="tagline-section">
+            <div class="tagline-card card">
+                <h3>"0% Thrust, 100% Imagination"</h3>
+            </div>
+            <div class="tagline-card card">
+                <h3>"Now Boarding: Regret (Don't worry, it's a short flight)"</h3>
+            </div>
+            <div class="tagline-card card">
+                <h3>"Serving Emotional Snacks Since Never"</h3>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="#">Origami Rewards</a>
+            <a href="#">Passenger Folding Policy</a>
+            <a href="#">Emotional Refund Form</a>
+            <a href="#">PaperCut Prevention Program</a>
+        </div>
+        <p>&copy; 2025 Launchpad Airlines – All Flights Are Fictional. Seriously.</p>
+        <p class="sprinkle-tagline">"Where Crashes Are Complimentary (and usually harmless)."</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

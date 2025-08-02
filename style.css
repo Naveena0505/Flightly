@@ -1,0 +1,667 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Nunito:wght@400;600;700;800&display=swap');
+
+:root {
+    --royal-blue: #4169E1;
+    --sky-blue: #87CEEB;
+    --cobalt-blue: #0047AB;
+    --midnight-blue: #191970;
+    --ice-blue: #ADD8E6;
+    --white: #FFFFFF;
+    --dark-text: #333333;
+    --light-grey: #f0f8ff; /* Alice Blue, slightly lighter than white */
+    --border-color: #bbd;
+    --accent-color: #FF69B4; /* Hot Pink */
+    --hover-blue: #6a8cff;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(135deg, var(--light-grey), var(--ice-blue));
+    color: var(--dark-text);
+    line-height: 1.6;
+}
+
+/* Header & Navbar */
+header {
+    background-color: var(--cobalt-blue);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-family: 'Pacifico', cursive;
+    font-size: 2.2rem;
+    color: var(--white);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-img {
+    height: 40px; /* Adjust size */
+    width: auto;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: color 0.3s ease, transform 0.2s ease;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background: var(--accent-color);
+    left: 0;
+    bottom: 0;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+
+/* Hero Banner */
+.hero-banner {
+    background: linear-gradient(45deg, var(--royal-blue), var(--sky-blue));
+    color: var(--white);
+    text-align: center;
+    padding: 6rem 1rem;
+    position: relative;
+    overflow: hidden;
+    height: 500px; /* Fixed height for better control of animation */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+}
+
+.hero-banner h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 4.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.4);
+    letter-spacing: 2px;
+}
+
+.hero-banner p {
+    font-size: 1.5rem;
+    opacity: 0.95;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+.btn-hero {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background-color: var(--accent-color);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.btn-hero:hover {
+    background-color: #e65c9f;
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* Paper Plane Hero Image and Animation */
+.paper-plane-hero-img {
+    position: absolute;
+    top: 50%;
+    left: -15%; /* Start off-screen */
+    width: 150px; /* Adjust size of your hero plane image */
+    height: auto;
+    transform: translateY(-50%) rotate(30deg); /* Initial rotation */
+    animation: heroFly 20s linear infinite;
+    z-index: 5; /* Behind text */
+    opacity: 0.9;
+    filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.3));
+}
+
+@keyframes heroFly {
+    0% {
+        left: -15%;
+        transform: translateY(-50%) rotate(30deg);
+    }
+    50% {
+        transform: translateY(-60%) rotate(35deg) scale(1.05);
+    }
+    100% {
+        left: 115%;
+        transform: translateY(-50%) rotate(30deg);
+    }
+}
+
+/* General Section Styling */
+section {
+    padding: 3rem 1.5rem;
+    max-width: 1000px;
+    margin: 2.5rem auto;
+    background-color: var(--white);
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+}
+
+h2 {
+    text-align: center;
+    color: var(--cobalt-blue);
+    margin-bottom: 0.8rem;
+    font-size: 2.8rem;
+    font-weight: 800;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 2.5rem;
+    font-style: italic;
+}
+
+/* Form Styling */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.8rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 0.6rem;
+    font-weight: 700;
+    color: var(--royal-blue);
+    font-size: 1.1rem;
+}
+
+.form-group select,
+.form-group input[type="text"] {
+    padding: 0.9rem 1.2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: var(--light-grey);
+    color: var(--dark-text);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group select:focus,
+.form-group input[type="text"]:focus {
+    border-color: var(--royal-blue);
+    box-shadow: 0 0 0 3px rgba(65, 105, 225, 0.2);
+    outline: none;
+}
+
+.form-group span {
+    padding: 0.9rem 1.2rem;
+    border: 2px dashed var(--ice-blue);
+    border-radius: 8px;
+    background-color: var(--light-grey);
+    color: var(--dark-text);
+    font-weight: 600;
+}
+
+.full-width {
+    grid-column: 1 / -1; /* Spans all columns */
+}
+
+.btn-book, .btn-add-on, .btn-generate {
+    grid-column: 1 / -1; /* Spans all columns */
+    padding: 1.2rem 2.5rem;
+    background-color: var(--accent-color);
+    color: var(--white);
+    border: none;
+    border-radius: 50px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    margin-top: 2rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.btn-book:hover, .btn-add-on:hover, .btn-generate:hover {
+    background-color: #e65c9f; /* Darker pink */
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* In-Flight Services */
+.in-flight-services .service-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+}
+
+.service-item {
+    background-color: var(--light-grey);
+    padding: 1.8rem;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid var(--ice-blue);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service-item:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.service-item h3 {
+    color: var(--royal-blue);
+    margin-top: 1rem;
+    margin-bottom: 0.8rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.service-item p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.service-img {
+    width: 80px; /* Size for service images */
+    height: auto;
+    margin-bottom: 10px;
+    filter: drop-shadow(3px 3px 5px rgba(0,0,0,0.2));
+    transition: transform 0.3s ease;
+}
+
+.service-item:hover .service-img {
+    transform: rotate(5deg) scale(1.1);
+}
+
+/* Flight Insurance */
+.flight-insurance ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 2rem;
+}
+
+.flight-insurance li {
+    background-color: var(--light-grey);
+    padding: 1rem 1.5rem;
+    margin-bottom: 1rem;
+    border-left: 6px solid var(--sky-blue);
+    border-radius: 8px;
+    font-style: italic;
+    font-size: 1.05rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.flight-insurance li strong {
+    color: var(--royal-blue);
+}
+
+.offer-slogan {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    margin-top: 2rem;
+    animation: pulse 1.5s infinite alternate;
+}
+
+@keyframes pulse {
+    from { transform: scale(1); opacity: 1; }
+    to { transform: scale(1.03); opacity: 0.9; }
+}
+
+/* Boarding Pass Section */
+.boarding-pass-preview {
+    border: 3px dashed var(--royal-blue);
+    padding: 2rem;
+    margin-top: 2.5rem;
+    border-radius: 12px;
+    text-align: center;
+    background-color: var(--light-grey);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.2rem;
+    color: var(--midnight-blue);
+    box-shadow: inset 0 0 15px rgba(0,0,0,0.1);
+    display: none; /* Hidden by default, shown when generated */
+}
+
+.boarding-pass-preview h3 {
+    color: var(--cobalt-blue);
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.boarding-pass-preview p {
+    margin: 0.7rem 0;
+    font-weight: 600;
+}
+
+.boarding-pass-preview p strong {
+    color: var(--dark-text);
+}
+
+.boarding-pass-preview .note {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 1.5rem;
+    font-style: italic;
+}
+
+/* Tagline Sprinkles */
+.tagline-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    background-color: transparent;
+    box-shadow: none;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.tagline-card {
+    background: linear-gradient(135deg, var(--sky-blue), var(--ice-blue));
+    color: var(--white);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    flex: 1;
+    min-width: 280px;
+    max-width: 380px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    transition: transform 0.4s ease, background 0.4s ease;
+    font-weight: 700;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tagline-card:hover {
+    transform: rotate(-3deg) scale(1.05);
+    background: linear-gradient(135deg, var(--royal-blue), var(--sky-blue));
+}
+
+.tagline-card h3 {
+    margin: 0;
+    font-size: 1.4rem;
+    font-style: italic;
+    color: var(--white); /* Ensure text remains white */
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+/* Footer */
+footer {
+    background-color: var(--midnight-blue);
+    color: var(--white);
+    text-align: center;
+    padding: 2.5rem 1.5rem;
+    margin-top: 4rem;
+    font-size: 0.95rem;
+    border-top: 5px solid var(--cobalt-blue);
+}
+
+.footer-links {
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.footer-links a {
+    color: var(--ice-blue);
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.2s ease;
+    font-weight: 600;
+}
+
+.footer-links a:hover {
+    color: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+.sprinkle-tagline {
+    font-style: italic;
+    margin-top: 1rem;
+    opacity: 0.85;
+    color: var(--sky-blue);
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .hero-banner h1 {
+        font-size: 3.5rem;
+    }
+    .hero-banner p {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 1rem 1rem;
+    }
+
+    .nav-links {
+        margin-top: 1.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-links li {
+        margin: 0.5rem 0.8rem;
+    }
+
+    .logo {
+        font-size: 1.8rem;
+    }
+
+    .hero-banner {
+        padding: 4rem 1rem;
+        height: auto; /* Adjust height for smaller screens */
+    }
+
+    .hero-banner h1 {
+        font-size: 2.8rem;
+    }
+
+    .hero-banner p {
+        font-size: 1.1rem;
+    }
+
+    .paper-plane-hero-img {
+        width: 100px; /* Smaller plane for smaller screens */
+        top: 20%; /* Adjust position */
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .btn-book, .btn-add-on, .btn-generate {
+        font-size: 1.1rem;
+        padding: 1rem 2rem;
+    }
+
+    .in-flight-services .service-list {
+        grid-template-columns: 1fr;
+    }
+
+    .tagline-card {
+        min-width: unset;
+        width: 90%;
+        padding: 1.5rem;
+        font-size: 1.1rem;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.5rem;
+    }
+    .logo-img {
+        height: 30px;
+    }
+
+    .hero-banner h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-banner p {
+        font-size: 1rem;
+    }
+
+    section {
+        padding: 1.5rem 1rem;
+        margin: 1.5rem auto;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .boarding-pass-preview p {
+        font-size: 1rem;
+    }
+}
+
+/* Modal specific styles */
+.fake-modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1001; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    padding: 20px;
+    backdrop-filter: blur(5px); /* Add blur effect */
+}
+.modal-content {
+    background-color: var(--white);
+    margin: auto;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+    position: relative;
+    max-width: 600px;
+    width: 90%;
+    text-align: center;
+    animation: fadeInScale 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+    border: 3px solid var(--royal-blue);
+}
+@keyframes fadeInScale {
+    from { opacity: 0; transform: translateY(-50px) scale(0.8); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+.modal-content h2 {
+    color: var(--cobalt-blue);
+    margin-top: 0;
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+}
+.modal-content p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+.modal-content .note {
+    font-size: 0.95rem;
+    color: #777;
+    margin-top: 20px;
+    font-style: italic;
+    font-weight: 600;
+}
+.close-button {
+    color: var(--midnight-blue);
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+.close-button:hover,
+.close-button:focus {
+    color: var(--accent-color);
+    transform: rotate(90deg);
+}
