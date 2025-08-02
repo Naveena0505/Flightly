@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const classType = document.getElementById('class').selectedOptions[0].textContent; // Use selected class
 
             const boardingPassHtml = `
-                <h3>&#9992; LAUNCHPAD AIRLINES &#9992;</h3>
+                <h3>&#9992; FLIGHTLY AIRLINES &#9992;</h3>
                 <p><strong>BOARDING PASS: ADMIT ONE IMAGINATION</strong></p>
                 <p>Passenger: <strong>${passengerName.toUpperCase()}</strong></p>
                 <p>Flight: <strong>${flightNumber}</strong></p>
