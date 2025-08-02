@@ -1,4 +1,3 @@
-// script.js
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Fake Booking Confirmation & Modal
     const flightBookingForm = document.getElementById('flight-booking-form');
